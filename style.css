@@ -101,3 +101,41 @@ body {
   color: white;
   text-shadow: 0 0 10px #fff;
 }
+/* Fade effect */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+}
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glow hover effect */
+.glow {
+    position: relative;
+    overflow: hidden;
+}
+.glow::after {
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: glowAnim 0.5s ease;
+}
+@keyframes glowAnim {
+    from { width: 0; height: 0; opacity: 1; }
+    to { width: 200px; height: 200px; opacity: 0; }
+}
+
+/* Parallax section */
+.parallax {
+    transition: transform 0.1s linear;
+}
