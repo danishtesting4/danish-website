@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Danish Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danish Website</title>
 
-  <!-- CSS utama -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- CSS animasi -->
-  <link rel="stylesheet" href="animations.css" />
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- Loading Screen -->
-  <div id="loading">
-    <div class="loader pop"></div>
-    <p class="fade-in">Mengaktifkan website...</p>
-  </div>
-
-  <!-- Isi Website -->
-  <div class="content hidden">
-
-    <div class="hero fade-in">
-      <img class="pfp pop floating" src="assets/profile2.png" alt="Foto Profil" />
-      <h1 class="title slide-left">Halo, saya Danish</h1>
-      <p class="subtitle slide-right">Selamat datang di website saya ✨</p>
+    <!-- PARALLAX PROFILE HEADER -->
+    <div class="header parallax fade">
+        <img src="assets/profile2.png" class="pfp" alt="Profile Picture">
+        <h1 class="fade">Halo, aku Danish!</h1>
+        <p class="fade description">
+            Halo, namaku danish dan aku suka bikin website seperti ini. 
+            Aku juga suka menemui ide hal baru (ini deskripsi bukan chatgpt ya -_-) 
+            Tapi aku ingin membikin website lagi!
+        </p>
     </div>
 
-    <div class="card fade-slow glass-hover">
-      <h2 class="shine">Tentang Saya</h2>
-      <p>Saya suka membuat website dengan animasi halus dan desain bersih.</p>
-      <a href="about.html" class="back-btn pulse">Lihat Selengkapnya</a>
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <a href="https://github.com/RidelLazor" class="btn glow fade" target="_blank">
+            GitHub
+        </a>
+
+        <a href="about.html" class="btn glow fade">
+            Tentang Aku
+        </a>
     </div>
 
-    <div class="card fade-slow glass-hover">
-      <h2 class="shine">Sosial Media</h2>
-      <a href="social.html" class="back-btn pulse">Buka Halaman Sosial</a>
-    </div>
+    <!-- FOOTER -->
+    <footer class="fade">
+        <p>Made by Danish • 2025</p>
+    </footer>
 
-  </div>
-
-  <script src="script.js"></script>
+    <!-- EFFECTS -->
+    <script src="effects.js"></script>
 </body>
 </html>
