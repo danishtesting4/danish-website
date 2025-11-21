@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Danish</title>
+
+  <!-- STYLE UTAMA -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- STYLE KHUSUS HALAMAN ABOUT -->
+  <style>
+    .about-container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.12);
+      backdrop-filter: blur(15px);
+      animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    .about-container h1 {
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #ffffff70;
+    }
+
+    .about-container p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      opacity: 0.9;
+    }
+
+    .profile-big {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 30px #ffffff80;
+      display: block;
+      margin: 20px auto 35px;
+      animation: pop 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 26px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      text-decoration: none;
+      transition: 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .back-btn:hover {
+      background: rgba(255,255,255,0.3);
+      box-shadow: 0 0 12px white;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Konten -->
+  <div class="about-container">
+      
+    <img src="assets/profile.png" alt="Foto Danish" class="profile-big">
+
+    <h1>Tentang Saya</h1>
+
+    <p>
+      Halo! Nama saya <b>Danish</b>.  
+      Saya suka membuat website sederhana seperti ini dan mencoba berbagai ide baru.
+      Saya sering mencari inspirasi dari desain modern, animasi halus, dan UI clean.
+    </p>
+
+    <p>
+      Website ini adalah hasil dari belajar, eksperimen, dan rasa penasaran saya tentang dunia web development.
+      Saya ingin membuat lebih banyak website lagi, dengan tampilan yang lebih keren dan fitur yang lebih menarik.
+    </p>
+
+    <p>
+      Terima kasih sudah mengunjungi halaman ini 😊
+    </p>
+
+    <a href="index.html" class="back-btn">Kembali ke Home</a>
+
+  </div>
+
+</body>
+</html>
