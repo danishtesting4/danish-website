@@ -5,39 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Danish Website</title>
 
-    <!-- MAIN CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <script>
+        // Disable right click
+        document.addEventListener("contextmenu", (e) => e.preventDefault());
+    </script>
 </head>
 <body>
 
-    <!-- PARALLAX PROFILE HEADER -->
+    <!-- HEADER -->
     <div class="header parallax fade">
         <img src="assets/profile2.png" class="pfp" alt="Profile Picture">
+
         <h1 class="fade">Halo, aku Danish!</h1>
-        <p class="fade description">
-            Halo, namaku danish dan aku suka bikin website seperti ini. 
-            Aku juga suka menemui ide hal baru (ini deskripsi bukan chatgpt ya -_-) 
-            Tapi aku ingin membikin website lagi!
-        </p>
+
+        <!-- DESKRIPSI BOX -->
+        <div class="desc-box fade">
+            <p>
+                Halo, namaku danish dan aku suka bikin website seperti ini. 
+                Aku juga suka menemui ide hal baru (ini deskripsi bukan chatgpt ya -_-) 
+                Tapi aku ingin membikin website lagi!
+            </p>
+        </div>
     </div>
 
-    <!-- BUTTONS -->
-    <div class="buttons">
-        <a href="https://github.com/RidelLazor" class="btn glow fade" target="_blank">
-            GitHub
-        </a>
-
-        <a href="about.html" class="btn glow fade">
-            Tentang Aku
-        </a>
+    <!-- BUTTONS BOX -->
+    <div class="button-box fade">
+        <a href="https://github.com/RidelLazor" target="_blank" class="btn glow">GitHub</a>
+        <a href="about.html" class="btn glow">Tentang Aku</a>
     </div>
 
-    <!-- FOOTER -->
     <footer class="fade">
         <p>Made by Danish • 2025</p>
     </footer>
 
-    <!-- EFFECTS -->
     <script src="effects.js"></script>
 </body>
 </html>
