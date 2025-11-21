@@ -4,38 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Danish Website</title>
+
+  <!-- CSS utama -->
   <link rel="stylesheet" href="style.css" />
+  <!-- CSS animasi -->
+  <link rel="stylesheet" href="animations.css" />
 </head>
 
 <body>
 
   <!-- Loading Screen -->
   <div id="loading">
-    <div class="loader"></div>
-    <p>Mengaktifkan website...</p>
+    <div class="loader pop"></div>
+    <p class="fade-in">Mengaktifkan website...</p>
   </div>
 
   <!-- Isi Website -->
   <div class="content hidden">
 
-    <div class="hero">
-      <img class="pfp" src="assets/profile2.png" alt="Foto Profil" />
-      <h1 class="title">Halo, saya Danish</h1>
-      <p class="subtitle">Selamat datang di website upgrade ini ✨</p>
+    <div class="hero fade-in">
+      <img class="pfp pop floating" src="assets/profile2.png" alt="Foto Profil" />
+      <h1 class="title slide-left">Halo, saya Danish</h1>
+      <p class="subtitle slide-right">Selamat datang di website saya ✨</p>
     </div>
 
-    <div class="card">
-      <h2>Tentang Saya</h2>
-      <p>Saya suka coding, web development, dan animasi keren.</p>
+    <div class="card fade-slow glass-hover">
+      <h2 class="shine">Tentang Saya</h2>
+      <p>Saya suka membuat website dengan animasi halus dan desain bersih.</p>
+      <a href="about.html" class="back-btn pulse">Lihat Selengkapnya</a>
     </div>
 
-    <div class="card">
-      <h2>Sosial Media</h2>
-      <ul>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Discord</a></li>
-        <li><a href="#">GitHub</a></li>
-      </ul>
+    <div class="card fade-slow glass-hover">
+      <h2 class="shine">Sosial Media</h2>
+      <a href="social.html" class="back-btn pulse">Buka Halaman Sosial</a>
     </div>
 
   </div>
