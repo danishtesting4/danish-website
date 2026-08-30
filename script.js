@@ -1,22 +1,38 @@
-console.log("Website Danish berhasil dimuat");
+fetch('config.json')
+  .then(res => res.json())
+  .then(config => {
+    document.title = config.name || 'whoami';
 
-window.addEventListener("load", () => {
-  // Fade-in setelah selesai loading
-  const loading = document.getElementById("loading");
-  const content = document.querySelector(".content");
+    document.getElementById('name').textContent = config.name || '';
+    document.getElementById('handle').textContent = config.handle ? '@' + config.handle : '';
+    document.getElementById('desc').textContent = config.description || '';
 
-  setTimeout(() => {
-    loading.style.opacity = "0";
-    loading.style.pointerEvents = "none";
+    const pfp = document.getElementById('pfp');
+    pfp.src = config.pfp || 'pfp/avatar.jpg';
+    pfp.alt = config.name ? config.name + ' profile picture' : 'profile picture';
 
-    content.classList.remove("hidden");
-  }, 700);
-});
+    const linksEl = document.getElementById('links');
+    (config.links || []).forEach(link => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = link.url;
+      a.target = link.url.startsWith('mailto:') ? '_self' : '_blank';
+      a.rel = 'noopener noreferrer';
 
-// Jika gambar error (termasuk 503), pakai fallback
-document.querySelectorAll("img").forEach(img => {
-  img.onerror = () => {
-    console.warn("Gambar gagal dimuat, menggunakan fallback");
-    img.src = "https://placehold.co/200x200?text=Image+Error";
-  };
-});
+      const icon = document.createElement('img');
+      icon.src = link.icon;
+      icon.alt = '';
+      icon.loading = 'lazy';
+
+      const label = document.createElement('span');
+      label.textContent = link.label;
+
+      a.appendChild(icon);
+      a.appendChild(label);
+      li.appendChild(a);
+      linksEl.appendChild(li);
+    });
+  })
+  .catch(err => {
+    console.error('Could not load config.json', err);
+  });
