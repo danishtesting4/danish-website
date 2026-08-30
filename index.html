@@ -1,48 +1,46 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Danish Website</title>
-
-    <link rel="stylesheet" href="style.css" />
-
-    <script>
-        // Disable right click
-        document.addEventListener("contextmenu", (e) => e.preventDefault());
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>whoami</title>
+<link rel="icon" href="pfp/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <div class="header parallax fade">
-        <img src="assets/profile2.png" class="pfp" alt="Profile Picture">
+<main class="term" id="term">
+  <div class="term-bar">
+    <span class="term-title">guest@site: ~</span>
+    <div class="win-controls">
+      <span class="win-btn">–</span>
+      <span class="win-btn">▢</span>
+      <span class="win-btn win-close">×</span>
+    </div>
+  </div>
 
-        <h1 class="fade">Halo, aku Danish!</h1>
+  <div class="term-body">
+    <div class="line prompt-line"><span class="prompt">$</span> whoami</div>
 
-        <!-- DESKRIPSI BOX -->
-        <div class="desc-box fade">
-            <p>
-                Halo, namaku danish dan aku suka bikin website seperti ini. 
-                Aku juga suka menemui ide hal baru (ini deskripsi bukan chatgpt ya -_-) 
-                Tapi aku ingin membikin website lagi!
-            </p>
-        </div>
+    <div class="identity" id="identity">
+      <img class="pfp" id="pfp" src="" alt="profile picture">
+      <div class="identity-text">
+        <h1 id="name">—</h1>
+        <p class="handle" id="handle"></p>
+        <p class="desc" id="desc"></p>
+      </div>
     </div>
 
-    <!-- BUTTONS BOX -->
-    <div class="button-box fade">
-        <a href="https://github.com/RidelLazor" target="_blank" class="btn glow">GitHub</a>
-        <a href="about.html" class="btn glow">Tentang Aku</a>
-            <a href="redirect1.html" class="btn glow">Redirect 1</a>
-            <a href="redirect2.html" class="btn glow">Redirect 2</a>
-    </div>
+    <div class="line prompt-line"><span class="prompt">$</span> ls links/</div>
+    <ul class="links" id="links"></ul>
 
-    <footer class="fade">
-        <p>Made by Danish • 2025</p>
-    </footer>
+    <div class="line prompt-line"><span class="prompt">$</span> <span class="cursor">▌</span></div>
+  </div>
+</main>
 
-    <script src="effects.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
